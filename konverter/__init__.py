@@ -231,7 +231,7 @@ class Konverter:
     else:
       self.model = self.input_model
     self.model_info = support.get_model_info(self.model)
-    if "tensorflow.python.keras.engine" not in str(type(self.model)):
+    if "keras.engine.sequential.Sequential" not in str(type(self.model)):
       raise Exception(error('Input model must be a Sequential tf.keras model, not {}'.format(type(self.model)), ret=True))
     elif not self.model_info.info.supported:
       raise Exception(error('Model is `{}`, must be in {}'.format(self.model.name, support.attr_map(support.models, 'name')), ret=True))
