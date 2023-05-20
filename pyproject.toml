@@ -13,7 +13,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.6"  # 3.6 to 3.7 is okay, or 3.8 if you're using a beta version of tf
-numpy = "~1.18.3"
+numpy = "~1.18"
 
 [tool.poetry.dev-dependencies]
 tensorflow = "^2.1.0"
